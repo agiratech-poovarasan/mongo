@@ -3,7 +3,7 @@ pipeline {
      stages {
          stage('verify') {
             steps { 
-                    sh " cocker --version"
+                    sh " docker --version"
               }
          }
        }
