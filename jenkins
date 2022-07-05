@@ -6,6 +6,11 @@ pipeline {
                     sh " docker --version"
               }
          }
+         stage('npm') {
+            steps{
+                  sh " npm install"
+              }
+          }        
          stage('build') {
           steps {
                     sh " docker-compose build"
