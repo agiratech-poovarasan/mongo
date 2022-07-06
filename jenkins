@@ -11,7 +11,12 @@ pipeline {
             steps{
                   sh " npm install"
               }
-          }        
+          }
+          stage('docker'){
+             steps{
+                    sh " apt install docker.io"
+               }
+          }
          stage('build') {
           steps {
                     sh " docker-compose build"
