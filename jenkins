@@ -4,6 +4,7 @@ pipeline {
          stage('verify') {
             steps { 
                     sh " docker --version"
+                    sh " docker-compose --version"
               }
          }
          stage('npm') {
