@@ -15,7 +15,6 @@ pipeline {
           stage('docker'){
              steps{
                     sh " systemctl start docker"
-                    sh " service docker start"
                }
           }
          stage('build') {
